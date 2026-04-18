@@ -1,6 +1,5 @@
 fun main() {
     val repo = BookRepository()
-    println("=== Library ===")
     println("Commands: ADD <title>;<author>;<year> | REMOVE <id> | LIST [title|author|year] | FIND <query> | STATS | EXIT")
 
     while (true) {
@@ -13,7 +12,6 @@ fun main() {
         val args = if (spaceIdx == -1) "" else line.substring(spaceIdx + 1)
 
         if (commandName == "EXIT") {
-            println("Goodbye!")
             break
         }
 
